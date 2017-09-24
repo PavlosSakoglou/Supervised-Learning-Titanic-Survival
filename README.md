@@ -9,19 +9,35 @@ In 1912, the ship RMS Titanic struck an iceberg on its maiden voyage and sank, r
 
 From a sample of the RMS Titanic data, we can see the various features present for each passenger on the ship:
 
+
 Survived: Outcome of survival (0 = No; 1 = Yes)
+
 Pclass: Socio-economic class (1 = Upper class; 2 = Middle class; 3 = Lower class)
+
 Name: Name of passenger
+
 Sex: Sex of the passenger
+
 Age: Age of the passenger (Some entries contain NaN)
+
 SibSp: Number of siblings and spouses of the passenger aboard
+
 Parch: Number of parents and children of the passenger aboard
+
 Ticket: Ticket number of the passenger
+
 Fare: Fare paid by the passenger
+
 Cabin Cabin number of the passenger (Some entries contain NaN)
+
 Embarked: Port of embarkation of the passenger (C = Cherbourg; Q = Queenstown; S = Southampton)
 
+
 Since we're interested in the outcome of survival for each passenger or crew member, we can remove the Survived feature from this dataset and store it as its own separate variable outcomes. We will use these outcomes as our prediction targets.
+
+# Run the project
+
+To run the project, create a local directory and save the titanic\_survival.py and titanic\_data.csv there. Then simply run the script and see the results as output. Only pandas are used from external libraries. See the questions below to make sense of the output of the script. 
 
 
 # Questions 
