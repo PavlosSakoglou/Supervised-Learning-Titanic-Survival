@@ -2,26 +2,22 @@
 """
 Created on Tue Sep 19 11:07:22 2017
 
-@author: Pavlos
+@author: Pavlos Sakoglou
+
+Course: Machine Learning Nanodegree, Udacity
 """
 
-# 
-# Importing pandas -- no need for more in order to work
-#
+# Importing pandas -- no need for more imports 
 import pandas as pd
 
-#
 # Get data from csv and store them in a vector and matrix: the vector with 
 # all the observations (survived) and the matrix of all data
-#
 df = pd.read_csv('titanic_data.csv', delimiter=',')
 
 outcomes = df['Survived']
 data = df.drop('Survived', axis = 1)
 
-#
 # Given function that returns a string message with the accuracy score of input
-#
 def accuracy_score(truth, pred):
     """ Returns accuracy score for input truth and predictions. """
     
@@ -35,11 +31,7 @@ def accuracy_score(truth, pred):
         return "Number of predictions does not match number of outcomes!"
 
 '''
-##########################
-#
 # Question 1
-#
-##########################
 '''
 def predictions_0(data):
     """ Model with no features. Always predicts a passenger did not survive. """
@@ -48,20 +40,19 @@ def predictions_0(data):
     for _, passenger in data.iterrows():
         
         # Predict the survival of 'passenger'
+        # We append 0, meaning that they all died. Otherwise we append 1
+        # i.e. 0 := Died, 1 := Survived
         predictions.append(0)
     
     # Return our predictions
     return pd.Series(predictions)
 
-#
 # Initialize predictions vector as above, and compute the accuracy
-#
 predictions = predictions_0(data)
 print("\nQuestion 1:")
 print(accuracy_score(outcomes, predictions))
 print("\n")
 '''
-#
 #
 # Answer 1: predictions have an accuracy of 61.62%
 #
@@ -69,11 +60,7 @@ print("\n")
 '''
 
 '''
-##########################
-#
 # Question 2
-#
-##########################
 '''
 def predictions_1(data):
     """ Model with one feature: 
@@ -91,15 +78,12 @@ def predictions_1(data):
     # Return our predictions
     return pd.Series(predictions)
 
-#
 # Initialize predictions vector as above, and compute the accuracy
-#
 predictions = predictions_1(data)
 print("Question 2:")
 print(accuracy_score(outcomes, predictions))
 print("\n")
 '''
-#
 #
 # Answer 2: predictions have an accuracy of 78.68%
 #
@@ -108,11 +92,7 @@ print("\n")
 
 
 '''
-##########################
-#
 # Question 3
-#
-##########################
 '''
 def predictions_2(data):
     """ Model with two features: 
@@ -131,15 +111,12 @@ def predictions_2(data):
     # Return our predictions
     return pd.Series(predictions)
 
-#
 # Initialize predictions vector as above, and compute the accuracy
-#
 predictions = predictions_2(data)
 print("Question 3:")
 print(accuracy_score(outcomes, predictions))
 print("\n")
 '''
-#
 #
 # Answer 3: predictions have an accuracy of 79.35%
 #
@@ -147,11 +124,7 @@ print("\n")
 '''
 
 '''
-##########################
-#
 # Question 4
-#
-##########################
 '''
 def predictions_3(data):
     """ Model with multiple features. Makes a prediction with an accuracy of at least 80%. """
@@ -180,9 +153,7 @@ def predictions_3(data):
     # Return our predictions
     return pd.Series(predictions)
 
-#
 # Initialize predictions vector as above, and compute the accuracy
-#
 predictions = predictions_3(data)
 print("Question 4:")
 print(accuracy_score(outcomes, predictions))
