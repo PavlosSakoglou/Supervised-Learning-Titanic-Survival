@@ -1,10 +1,9 @@
-# -*- coding: utf-8 -*-
 """
 Created on Tue Sep 19 11:07:22 2017
 
-@author: Pavlos Sakoglou
+Author: Pavlos Sakoglou
 
-Course: Machine Learning Nanodegree, Udacity
+Course: Machine Learning Engineer Nanodegree, Udacity
 """
 
 # Importing pandas -- no need for more imports 
@@ -50,8 +49,7 @@ def predictions_0(data):
 # Initialize predictions vector as above, and compute the accuracy
 predictions = predictions_0(data)
 print("\nQuestion 1:")
-print(accuracy_score(outcomes, predictions))
-print("\n")
+print(accuracy_score(outcomes, predictions), "\n")
 '''
 #
 # Answer 1: predictions have an accuracy of 61.62%
@@ -81,8 +79,7 @@ def predictions_1(data):
 # Initialize predictions vector as above, and compute the accuracy
 predictions = predictions_1(data)
 print("Question 2:")
-print(accuracy_score(outcomes, predictions))
-print("\n")
+print(accuracy_score(outcomes, predictions), "\n")
 '''
 #
 # Answer 2: predictions have an accuracy of 78.68%
@@ -114,8 +111,7 @@ def predictions_2(data):
 # Initialize predictions vector as above, and compute the accuracy
 predictions = predictions_2(data)
 print("Question 3:")
-print(accuracy_score(outcomes, predictions))
-print("\n")
+print(accuracy_score(outcomes, predictions), "\n")
 '''
 #
 # Answer 3: predictions have an accuracy of 79.35%
