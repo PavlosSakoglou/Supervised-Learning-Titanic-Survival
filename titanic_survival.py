@@ -1,5 +1,4 @@
 """
-Created on Tue Sep 19 11:07:22 2017
 
 Author: Pavlos Sakoglou
 
